@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProjectFrames from '../ProjectFrames/ProjectFrames';
 import currencyconverter from '../../assets/ProjectPics/CurrencyConverter.png';
-import responsivewebsite from '../../assets/ProjectPics/ResponsiveWebsite.png';
+import responsivewebsite from '../../assets/ProjectPics/responsivewebsite.png';
 import portfoliowebsite from '../../assets/ProjectPics/portfoliowebsite.png';
 import clickme from '../../assets/ProjectPics/ClickMe.png';
 import ProjectsButton from '../Buttons/ProjectsButton';
