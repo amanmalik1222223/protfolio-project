@@ -16,23 +16,18 @@ class HeroSection extends Component {
             >
                 <div className='flex flex-col-reverse sm:flex-row w-full max-w-7xl mx-auto'>
                     {/* Text Section */}
-                    <div className='flex flex-col w-full sm:w-1/2 text-left font-oswald text-white gap-4 sm:gap-6 items-start justify-center'>
-                        <div className='text-4xl md:text-5xl lg:text-6xl'>
-                            <h1>Hi,</h1>
-                        </div>
-                        <div className='text-4xl md:text-5xl lg:text-6xl'>
-                            <h1>My name is Aman</h1>
-                        </div>
-                        <div className='text-4xl md:text-5xl lg:text-6xl'>
-                            <span>I am a </span>
+                    <div className='flex flex-col w-full sm:w-1/2 text-left text-white gap-4 sm:gap-6 items-start justify-center'>
+                        <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold leading-tight'>
+                            Hi, I’m Aman.
+                        </h1>
+                        <div className='text-4xl md:text-5xl lg:text-6xl font-semibold'>
                             <TypeAnimation
                                 sequence={[
-                                    // Same substring at the start will only be typed out once, initially
                                     'Web Developer',
-                                    1000, // wait 1s before replacing "Mice" with "Hamsters"
-                                    'Ui/Ux Designer',
                                     1000,
-                                    'Freelance Designer and Developer',
+                                    'UI/UX Designer',
+                                    1000,
+                                    'Freelancer',
                                     1000,
                                 ]}
                                 wrapper="span"
@@ -41,21 +36,17 @@ class HeroSection extends Component {
                                 repeat={Infinity}
                             />
                         </div>
-                        <div className='font-poppins'>
-                            <h5 className='text-lightGray text-base md:text-lg lg:text-xl'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea commodo consequat.
-                            </h5>
-                        </div>
+                        <p className='text-lightGray text-base md:text-lg lg:text-xl mt-4 font-medium'>
+                            I build seamless, user-focused digital solutions that blend innovation with aesthetics.
+                        </p>
                     </div>
 
                     {/* Image Section */}
                     <div className='flex items-center justify-center w-full sm:w-1/2 mt-8 sm:mt-0'>
                         <img
                             src={aman1}
-                            alt='My photo'
-                            className='w-3/4 md:w-1/2 lg:w-2/3 h-auto max-w-md lg:max-w-lg rounded-full'
+                            alt='Aman'
+                            className='w-3/4 md:w-2/3 lg:w-1/2 h-auto max-w-md lg:max-w-lg rounded-full shadow-lg transition-transform duration-300 hover:scale-105'
                         />
                     </div>
                 </div>
