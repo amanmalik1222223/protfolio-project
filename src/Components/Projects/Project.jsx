@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ProjectFrames from '../ProjectFrames/ProjectFrames';
-import currencyconverter from '../../assets/ProjectPics/CurrencyConverter.png'
+import currencyconverter from '../../assets/ProjectPics/CurrencyConverter.png';
+import responsivewebsite from '../../assets/ProjectPics/ResponsiveWebsite.png';
+import portfoliowebsite from '../../assets/ProjectPics/portfoliowebsite.png';
+import clickme from '../../assets/ProjectPics/ClickMe.png';
 import ProjectsButton from '../Buttons/ProjectsButton';
 
 class Project extends Component {
@@ -12,16 +15,28 @@ class Project extends Component {
                     <h1 className=''>Projects</h1>
                 </div>
 
-                <div className='flex gap-10 mb-8'>
-                    {/* Reusing the component with different images and headings */}
-                    <ProjectFrames image={currencyconverter} heading="Currency Converter Project" />
-                    <ProjectFrames image={currencyconverter} heading="Currency Converter Project" />
-                    <ProjectFrames image={currencyconverter} heading="Currency Converter Project" />
+                {/* Projects Container */}
+                <div className='lg:flex lg:flex-row flex-col lg:gap-10 gap-6 lg:mb-8 mb-4'>
+                    {/* Reusing the ProjectFrames component for each project */}
+                    <ProjectFrames
+                        image={portfoliowebsite}
+                        heading="Portfolio Website"
+                        url="" />
+                    <ProjectFrames
+                        image={responsivewebsite}
+                        heading="Responsive Website"
+                        url="https://amanmalik1222223.github.io/responsive-website/" />
+                    <ProjectFrames
+                        image={currencyconverter}
+                        heading="Currency Converter App"
+                        url="https://currency-converter-zeta-lake.vercel.app/"
+                    />
+                    
                 </div>
 
-
-                <div className='w-full text-center'>
-                    <ProjectsButton heading="See More"/>
+                {/* Button */}
+                <div className='z-50 w-full text-center'>
+                    <ProjectsButton heading="See More" />
                 </div>
             </div>
         );

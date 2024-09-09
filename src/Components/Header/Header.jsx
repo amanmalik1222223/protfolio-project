@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,6 +8,18 @@ const Header = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    // Disable scroll when menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto'; // Reset overflow on component unmount
+        };
+    }, [isOpen]);
 
     return (
         <>
@@ -28,7 +40,8 @@ const Header = () => {
 
             {/* Mobile menu */}
             <div className='flex-col lg:hidden bg-transparent w-full justify-between items-middle text-white font-cormorant pt-5'>
-                <div className='flex max-h-[14vh] bg-transparent w-full justify-between items-baseline md:px-9 px-7 text-white font-cormorant pb-4 align-middle'>
+                <div className='flex max-h-[12vh] z-50 bg-transparent w-full justify-between items-baseline md:px-9 px-7 text-white 
+                font-cormorant pb-4 align-middle'>
                     <div className='text-orange-700 md:text-4xl w-full sm:text-3xl text-2xl font-bold font-oswald'>
                         <span>AMAN MALIK</span>
                     </div>
@@ -42,26 +55,27 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Menu items with smooth transition */}
+                {/* Overlay Menu */}
                 <div
-                    className={`lg:hidden flex-col text-2xl font-medium font-roboto bg-gray-950 text-orange-200 w-full 
-                    min-h-[89.5vh] transition-all duration-500 ease-in-out ${
-                        isOpen ? 'opacity-100 block' : 'opacity-0 hidden'
+                    className={`fixed top-[12vh] left-0 w-full h-full bg-white bg-opacity-30 backdrop-blur-md text-orange-200 z-40 
+                        flex flex-col items-center font-roboto font-medium
+                        transition-all duration-500 ease-in-out text-2xl ${
+                        isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                     }`}
                 >
-                    <div className='lg:px-11 md:px-9 px-7 py-4 w-full cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700 text-center'>
+                    <div className='w-full text-center py-4 cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700'>
                         <a href='#home'>Home</a>
                     </div>
-                    <div className='lg:px-11 md:px-9 px-7 py-4 w-full cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700 text-center'>
+                    <div className='w-full text-center py-4 cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700'>
                         <a href='#about'>About Me</a>
                     </div>
-                    <div className='lg:px-11 md:px-9 px-7 py-4 w-full cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700 text-center'>
+                    <div className='w-full text-center py-4 cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700'>
                         <a href='#projects'>Projects</a>
                     </div>
-                    <div className='lg:px-11 md:px-9 px-7 py-4 w-full cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700 text-center'>
+                    <div className='w-full text-center py-4 cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700'>
                         <a href='#experience'>Experience</a>
                     </div>
-                    <div className='lg:px-11 md:px-9 px-7 py-4 w-full cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700 text-center'>
+                    <div className='w-full text-center py-4 cursor-pointer transition ease-in-out duration-500 hover:bg-gray-700'>
                         <a href='#contact'>Contact Me</a>
                     </div>
                 </div>
