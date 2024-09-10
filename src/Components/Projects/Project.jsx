@@ -8,7 +8,7 @@ import ProjectsButton from '../Buttons/ProjectsButton';
 class Project extends Component {
     render() {
         return (
-            <div id='projects' className='h-auto w-full px-[5vw] pt-[15vh] pb-[20vh] bg-darkBlack'>
+            <div id='projects' className='h-auto w-full px-[5vw] py-[20vh] bg-darkBlack'>
                 {/* Heading */}
                 <div className='w-full text-center text-6xl text-white mb-20 font-oswald font-semibold'>
                     <h1 className=''>Projects</h1>
@@ -30,11 +30,12 @@ class Project extends Component {
                         heading="Currency Converter App"
                         url="https://currency-converter-zeta-lake.vercel.app/"
                     />
+                    
                 </div>
 
                 {/* Button */}
                 <div className='z-50 w-full text-center'>
-                    <ProjectsButton heading="See More" link="/projectmain" />
+                <ProjectsButton heading="See More" link="/projectmain" />
                 </div>
             </div>
         );

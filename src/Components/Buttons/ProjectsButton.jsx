@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 
 class ProjectsButton extends Component {
     handleClick = () => {
-        const { link, onClick } = this.props;
+        const { link } = this.props;
         if (link) {
             window.location.href = link;
-        } else if (onClick) {
-            onClick();
         }
     };
 
