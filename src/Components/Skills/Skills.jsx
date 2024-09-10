@@ -8,7 +8,7 @@ import react_logo from '../../assets/Skill_Img/React.png';
 import github_logo from '../../assets/Skill_Img/GitHub.png';
 import git_logo from '../../assets/Skill_Img/Git.png';
 import vs_code_logo from '../../assets/Skill_Img/VS-Code.png';
-import figma_logo from '../../assets/Skill_Img/Figma.png';
+import figma_logo from '../../assets/Skill_Img/FIgma.png';
 import webflow_logo from '../../assets/Skill_Img/Webflow.png';
 import framer_logo from '../../assets/Skill_Img/Framer.png';
 

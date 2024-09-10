@@ -4,7 +4,7 @@ import Skills from '../Skills/Skills';
 class AboutMe extends Component {
     render() {
         return (
-            <div className='bg-black h-auto w-full px-[10vw] py-[15vh]'>
+            <div id='about' className='section bg-black h-auto w-full px-[10vw] py-[15vh]'>
                 {/* Heading */}
                 <div className='text-6xl text-white mb-10 font-oswald font-semibold'>
                     <h1>About Me</h1>

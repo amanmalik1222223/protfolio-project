@@ -4,7 +4,7 @@ class ExperienceFrame extends Component {
     render() {
         const { jd, company, location, timeduration, description } = this.props;
         return (
-            <div className='w-full h-auto px-10 py-8 text-white gap-5 bg-gradient-to-b 
+            <div id='experience' className='w-full h-auto px-10 py-8 text-white gap-5 bg-gradient-to-b 
             from-customBlack to-darkBlack rounded-xl'>
                 <div className='text-4xl font-roboto font-semibold'>
                     <h1>{jd}</h1>
