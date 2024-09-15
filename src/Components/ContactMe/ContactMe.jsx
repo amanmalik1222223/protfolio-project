@@ -13,7 +13,7 @@ class ContactMe extends Component {
                     </h2>
                 </div>
                 <div>
-                    <ProjectsButton heading="Let's Collaborate" link="https://www.linkedin.com/in/your-profile" />
+                    <ProjectsButton heading="Let's Collaborate" link="https://www.linkedin.com/in/aman-malik-4a8343227/" />
                 </div>
                 <div className='flex gap-6 text-white text-3xl'>
                 <a href="https://x.com/amalik_2003" target="_blank" rel="noopener noreferrer">
